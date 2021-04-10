@@ -8,3 +8,15 @@ function buyCake() {
 }
 
 // (previousState, action) => newState
+
+const reducer = (state = initialState, action) => {
+    switch(action.type) {
+        case BUY_CAKE: return {
+            ...state,
+            numOfCakes: state.numOfCcakes - 1
+        }
+
+        default: return state
+    }
+}
+
